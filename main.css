@@ -1,0 +1,107 @@
+/* Base styles */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 20px; 
+    gap: 40px; /* This will create 40px of space between the image and text */
+  }
+  
+  
+  .image-container {
+    flex: 1; 
+    max-width: 50%;
+  }
+  
+  .text-content {
+    flex: 1; 
+    padding-left: 20px;
+  }
+  
+  img { 
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading text */
+    width: 100%; /* Ensure the heading takes full width */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center buttons beneath the image */
+    padding: 20px 0; /* Spacing above and below the buttons */
+  }
+  
+  .button { 
+    margin: 5px; /* A little space between buttons */
+    padding: 10px 20px; 
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .image-container, .text-content {
+      max-width: 100%;
+    }
+    
+    .button-container {
+      justify-content: space-around;
+    }
+  }
+  
+  
+  /* Media queries for tablet and mobile can
+  
+  
+  /* Mobile styles */
+  @media only screen and (max-width: 767px) {
+    /* Mobile-specific styles here */
+  }
+  
+  /* Tablet styles */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet-specific styles here */
+  }
+
+  /* Desktop styles */
+@media only screen and (min-width: 1025px) {
+    .container {
+      flex-direction: row; /* Side-by-side layout for desktop */
+      align-items: flex-start; /* Align items to the top */
+    }
+  
+    .image-container, .text-content {
+      width: 50%; /* Split the container space between image and text */
+    }
+  
+    .button-container {
+      justify-content: flex-start; /* Align buttons to the start beneath the image */
+    }
+  
+    .button {
+      /* Adjust button styles if needed */
+    }
+    
+    .heading {
+      /* Ensure the heading is styled correctly for desktop views */
+    }
+  }
