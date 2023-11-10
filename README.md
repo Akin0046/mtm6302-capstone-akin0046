@@ -38,3 +38,17 @@
 **Rationale**:
 - Sans-serif fonts are clean, readable, and look contemporary.
 - White space around text ensures readability and balances the design.
+
+## PROCESS
+- I started by creating HTML and CSS files.
+- Added an images folder.
+- Generated HTML code for a heading, an image, and a paragraph.
+- Added buttons using JavaScript functions.
+- Added CSS to style the site, with media queries to make it responsive to varying screen sizes.
+
+## RESOURCES
+- [W3Schools](https://www.w3schools.com/)
+- [Chat with OpenAI](https://chat.openai.com/)
+
+## CHALLENGES
+- Getting the media quries to work properly
