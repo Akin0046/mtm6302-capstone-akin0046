@@ -20,3 +20,25 @@ async function fetchAPOD(date) {
         alert('Failed to fetch APOD.');
     }
 }
+
+// Function to display APOD in #apodResult section
+function displayAPOD(data) {
+    const apodElement = document.getElementById('apodResult');
+    apodElement.innerHTML = `
+        <h3 class="text-center">${data.title} (${data.date})</h3>
+        <img src="${data.url}" alt="${data.title}" class="mt-4 mb-4" id="apodImage">
+        <div class="text-center mb-4">
+            <button onclick="saveToFavourites('${data.date}')" class="btn btn-dark">
+                <i class="fas fa-heart"></i> Save to Favorites
+            </button>
+            <button onclick="downloadImage('${data.url}')" class="btn btn-dark">
+                <i class="fas fa-download"></i> Download
+            </button>
+            <button onclick="printImage('apodImage')" class="btn btn-dark">
+                <i class="fas fa-print"></i> Print
+            </button>
+        </div>
+        <p class="text-center mt-4">${data.explanation}</p>
+    `;
+}
+
