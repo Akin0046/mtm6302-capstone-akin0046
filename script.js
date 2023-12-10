@@ -43,6 +43,7 @@ function displayAPOD(data) {
 }
 
 
+
 // Function to fetch and display today's APOD
 async function fetchAndDisplayTodayAPOD() {
     const today = new Date().toISOString().split('T')[0]; // Get today's date in the YYYY-MM-DD format
