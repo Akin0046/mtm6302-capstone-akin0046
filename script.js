@@ -21,6 +21,7 @@ async function fetchAPOD(date) {
     }
 }
 
+
 // Function to display APOD in #apodResult section
 function displayAPOD(data) {
     const apodElement = document.getElementById('apodResult');
