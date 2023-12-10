@@ -56,3 +56,21 @@
 
 ## Capstone Part 4 Report 
 
+- Did reasearch on NASA APOD API and how to use it
+- imaported all needed libraries 
+- made a clone of my code saved as a test file that i can break without losing progress
+- replaced title heading, image and paragraph with Apod result disaply funtions and script
+- applied needed CSS AND stlyling
+- whenever i had a section or funtion working a i intend i upload it to my actual code or save it in my notes
+## CHALLENGES
+i could not figure out why my icons where not working so i gave up on that im guessing i did not link font awesome properly, later realised i had to sign up and get a script tag to put in my html
+
+## UPDATED RESOURCES
+- https://apod.nasa.gov/apod/astropix.html
+- [W3Schools](https://www.w3schools.com/)
+- [Chat with OpenAI](https://chat.openai.com/)
+- https://github.com/DeveloperBlue/NASA-Astronomy-Picture-of-the-Day
+- https://developerblue.github.io/NASA-Astronomy-Picture-of-the-Day/?date=2023-12-10
+
+
+
