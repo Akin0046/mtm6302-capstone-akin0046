@@ -62,3 +62,62 @@ async function fetchAndDisplayTodayAPOD() {
 }
 
 document.addEventListener('DOMContentLoaded', fetchAndDisplayTodayAPOD);
+
+
+// Function to save APOD to favorites
+function saveToFavourites(date) {
+    let favourites = JSON.parse(localStorage.getItem('apodFavourites')) || {};
+    favourites[date] = {
+        title: document.querySelector('#apodResult h3').innerText,
+        url: document.querySelector('#apodResult img').src,
+        explanation: document.querySelector('#apodResult p').innerText,
+    };
+    localStorage.setItem('apodFavourites', JSON.stringify(favourites));
+    displayFavourites();
+}
+//Funtion to delete favorites
+function deleteFavourite(date) {
+    let favourites = JSON.parse(localStorage.getItem('apodFavourites')) || {};
+    delete favourites[date];
+    localStorage.setItem('apodFavourites', JSON.stringify(favourites));
+    displayFavourites();
+}
+
+
+// Function to display favorites in a grid
+function displayFavourites() {
+    const favourites = JSON.parse(localStorage.getItem('apodFavourites')) || {};
+    const favouritesContainer = document.getElementById('apodFavoritesGrid');
+    favouritesContainer.innerHTML = '';
+
+    Object.keys(favourites).forEach(date => {
+        const fav = favourites[date];
+
+        const gridItem = document.createElement('div');
+        gridItem.className = 'col';
+        gridItem.innerHTML = `
+            <div class="card">
+                <img src="${fav.url}" class="card-img-top" alt="${fav.title}" onclick="displayFullImage('${fav.url}', '${fav.title}', '${fav.explanation}')">
+                <div class="card-body">
+                    <h5 class="card-title">${fav.title}</h5>
+                    <button onclick="deleteFavourite('${date}')" class="btn btn-danger">Delete from Favourites</button>
+                </div>
+            </div>
+        `;
+        favouritesContainer.appendChild(gridItem);
+    });
+}
+
+
+
+
+
+// Event listener for form submission
+document.getElementById('dateForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const date = document.getElementById('dateInput').value;
+    fetchAPOD(date);
+});
+
+// Set max date for date input
+document.getElementById('dateInput').setAttribute('max', new Date().toISOString().split('T')[0]);
