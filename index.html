@@ -22,20 +22,21 @@
     </header>
 
     <section id="apodSearch" class="text-center mb-4">
-        <form id="dateForm" class="row g-2 justify-content-center">
-            <div class="col-auto">
-                <label for="dateInput" class="sr-only">Enter a Date (YYYY-MM-DD):</label>
-                <input type="date" class="form-control form-control-sm" id="dateInput" max="" required>
-            </div>
-        </form>
-        <div class="text-center mt-2">
-            <button type="button" class="btn btn-dark btn-sm" onclick="fetchAPOD(document.getElementById('dateInput').value)">Fetch APOD</button>
-        </div>
-    </section>
+      <h2>Search APOD</h2>        <form id="dateForm" class="row g-2 justify-content-center">
+          <div class="col-auto">
+              <label for="dateInput" class="sr-only">Enter a Date (YYYY-MM-DD):</label>
+              <input type="date" class="form-control form-control-sm" id="dateInput" required>
+          </div>
+      </form>
+      <div class="text-center mt-2">
+          <button type="button" class="btn btn-dark btn-sm" onclick="fetchAPOD(document.getElementById('dateInput').value)">Fetch APOD</button>
+      </div>
+  </section>
 
-    <section id="apodResult">
-        <!-- APOD results will be displayed here -->
-    </section>
+  <section id="apodResult">
+      <h2>APOD Result</h2>
+      <!-- APOD results will be displayed here -->
+  </section>
 
     <section id="favourites" class="mt-5">
         <h2>Favourites</h2>
