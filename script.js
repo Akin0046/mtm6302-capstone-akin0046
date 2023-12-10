@@ -42,3 +42,23 @@ function displayAPOD(data) {
     `;
 }
 
+
+// Function to fetch and display today's APOD
+async function fetchAndDisplayTodayAPOD() {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in the YYYY-MM-DD format
+    try {
+        const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${today}`);
+        const data = await response.json();
+
+        if (data.media_type === 'image') {
+            displayAPOD(data);
+        } else {
+            alert('Today\'s APOD is not an image.');
+        }
+    } catch (error) {
+        console.error('Error fetching APOD:', error);
+        alert('Failed to fetch APOD.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchAndDisplayTodayAPOD);
