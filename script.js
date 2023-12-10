@@ -29,7 +29,7 @@ function displayAPOD(data) {
         <img src="${data.url}" alt="${data.title}" class="mt-4 mb-4" id="apodImage">
         <div class="text-center mb-4">
             <button onclick="saveToFavourites('${data.date}')" class="btn btn-dark">
-                <i class="fas fa-heart"></i> Save to Favorites
+                <i class="fas fa-heart"></i> Favorites
             </button>
             <button onclick="downloadImage('${data.url}')" class="btn btn-dark">
                 <i class="fas fa-download"></i> Download
@@ -101,7 +101,7 @@ function displayFavourites() {
                 <img src="${fav.url}" class="card-img-top" alt="${fav.title}" onclick="displayFullImage('${fav.url}', '${fav.title}', '${fav.explanation}')">
                 <div class="card-body">
                     <h5 class="card-title">${fav.title}</h5>
-                    <button onclick="deleteFavourite('${date}')" class="btn btn-danger">Delete from Favourites</button>
+                    <button onclick="deleteFavourite('${date}')" class="btn btn-light">Remove</button>
                 </div>
             </div>
         `;
