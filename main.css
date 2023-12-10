@@ -1,7 +1,19 @@
 /* Set the default font for the entire page */
 body {
-  font-family: 'Arial', sans-serif;
   background-color: #f4f4f4; /* Set a light background color */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
 }
 
 /* Add padding to the container to create space around the content */
